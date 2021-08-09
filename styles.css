@@ -1,0 +1,371 @@
+* {
+    font-size:12px;
+}
+body {
+    display: flex;
+    justify-content:center;
+    background-color:rgb(235, 235, 235);
+}
+#container {
+    position: relative;
+    max-width: 450px;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#containerContent {
+    height:570px;
+  position: relative;
+  border-radius: 37px;
+  border: 18px solid rgb(255, 255, 255);
+  background-color: rgb(228, 228, 228);
+}
+/*Icones de top e bottom*/
+
+#iconTopBody {
+  position: absolute;
+  left: -250px;
+  top: 0;
+  width: 420px;
+  height: 500px;
+  background-color: #9241c8;
+  border-radius: 0 0 40% 40%;
+}
+
+#perfilTop {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  height: 80px;
+  background-image: linear-gradient(45deg, #9241c8, #ff39cd);
+  border-radius: 20px 20px 5px 5px;
+  margin-bottom: 0px;
+}
+
+#topBar {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: -4px;
+  margin: auto;
+  width: 140px;
+  height: 15px;
+  border-radius: 0 0 10px 10px;
+  background-color: rgb(255, 255, 255);
+}
+#moreOptions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  right: -20px;
+}
+/*Icon de mais opções*/
+.iconMoreOptions {
+  width: 3px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: rgb(255, 255, 255);
+}
+#descriptionPerfil {
+  margin-left: 10px;
+}
+
+#nameUser {
+    cursor:default;
+    color: white;
+    font-weight: 600;
+    margin-bottom: -15px;
+}
+
+#descriptionPerfil p:nth-child(2) {
+    color: hsl(276, 100%, 81%);
+    font-size: 10px;
+    margin-top: 15px;
+    cursor:default;
+
+}
+#avatar {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+#voltarIcon {
+  color: white;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+#areaDeMensagens {
+    margin-top: -10px;
+    height:508px;
+  background-color: hsl(270, 7%, 64%);
+  border-radius: 0px 0px 30px 30px;
+}
+
+/*Campo de mensagens*/
+.mensagensRecebidas {
+    transform:translateY(5px);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color:#ccc;
+    border: none;
+    width:180px;
+    border-radius:10px 10px 10px 0px;
+    height:35px;
+    padding-left: 0px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    cursor:default;
+
+}
+
+.mensagensRecebidas p {
+    margin-left: 10px;
+    margin-right: 5px;
+    color: hsl(271, 100%, 27%);
+}
+
+.mensagensRecebidas:nth-child(1) {
+height:35px;
+}
+
+.ultimaMsg{
+    height:58px;
+    margin-bottom: 165px;
+    }
+
+.containerMsg {
+    position:absolute;
+    right: -5px;
+    top: 235px;
+    width:215px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.mensagensEnviadas:nth-child(2),.mensagensEnviadas:nth-child(3) {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width:190px;
+    height: 25px;
+    border-radius: 10px 10px 0px 10px;
+    border:none;
+    background-color:white;
+    cursor:default;
+}
+
+.containerMsg .mensagensEnviadas:nth-child(2) {
+    height: 35px;
+    padding-left:15px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.mensagensEnviadas:nth-child(3) {
+    width:175px;
+    padding-left:15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#imgsDogs {
+margin-left: 30px;
+}
+
+.msgDog {
+    margin-left: 3px;
+    width:50px;
+    height:50px;
+    border-radius: 16px;
+}
+
+.msgDog:nth-child(3) {
+    margin-right: 10px;    
+}
+
+.produtos {
+    margin-left: 10px;
+    border-radius:10px 10px 10px 0px;
+    background-image: linear-gradient(45deg, #9241c8, #ff39cd);
+    margin-bottom: 10px;
+    width:190px;
+    height:40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor:default;
+
+}
+
+.produtos::before {
+    content: " ";
+    width:15px;
+    height:15px;
+    background-color: transparent;
+    border: 3px solid #ffffffe3;
+    border-style: inset;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.produtos:hover.produtos::before {
+    animation: carregamentoChat 2s linear infinite;
+}
+
+@keyframes carregamentoChat {
+    0% {
+        transform:rotate(0)
+    }
+    
+    50% {
+        transform:rotate(180deg)
+    }
+    
+    100% {
+        transform:rotate(360deg)
+    }
+}
+
+.produtos p {
+    color: white;
+}
+
+.valor p {
+    font-weight:bold;
+}
+
+#enviarMensagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    cursor:default;
+    position: relative;
+}
+
+#enviarMensagem p {
+    margin-top: 90px;
+    width: 90%;
+    border-radius: 15px;
+    background-color: #ffffff;
+    height:40px;
+    line-height:40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#enviarMensagem p {
+    color: #7c7c7c;
+}
+
+#iconEnviar {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    top:50px;
+    transform: rotate(180deg);
+    width:27px;
+    height:27px;
+    font-weight: bold;
+    color: white;
+    background-color: hsl(271, 36%, 24%)
+}
+
+
+#textTitle h1 {
+    color: hsl(271, 36%, 24%);
+    text-align: center;
+    font-size: 3.3em;
+}
+
+#textDescription {
+    color: #505050;
+    padding: 0 0px;
+    text-align:center;
+    line-height: 1.5em;
+    font-size:18px;
+}
+
+#textDescription h2 {
+    font-size:1.2em;
+    line-height:1.7em;
+}
+
+@media  screen  and (min-width:320px){
+    #container {
+        padding:20px 40px
+    }
+    
+    #iconBottomBody {
+        right: 0;
+    }
+}
+
+@media  screen  and (min-width:728px){
+    #container {
+        margin-top:-8px;
+        max-width: 900px;
+        display:grid;
+        column-gap: 30px;
+        grid-template-columns:1fr 1fr;
+        align-items: center;
+    }
+
+    #areaDeMensagens {
+        height:460px
+    }
+    
+    #containerContent {
+        width: 250px;
+        height:525px
+    }
+
+    #enviarMensagem {
+        margin-top: -45px;
+    }
+      #iconTopBody {
+        width: 820px;
+        height: 600px;
+        top:0px;
+        left: 0%;
+        transform: translateX(-40%);
+      }
+
+      #informations {
+          display:flex;
+          justify-content:center;
+          flex-direction: column;
+          width: 330px;
+          height:480px;
+        background-color: #d7a2fa;
+        border-radius: 50% 0 50% 0;
+        border: 20px solid #c56dff41;
+    }
+
+    #textTitle h1 {
+        margin-top: 50px;
+        margin-left: 20px;
+        text-align:center;
+    }
+    #textDescription {
+        margin-top: -35px;
+        width:300px;
+    }
+}
